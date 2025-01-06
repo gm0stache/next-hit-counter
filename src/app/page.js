@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Counter } from "./counter";
+
 import { readFile, writeFile } from "../helpers/file-helpers";
 
 const DATABASE_PATH = "/src/database.json";
@@ -37,7 +39,7 @@ function Home() {
   return (
     <main>
       <h1>Welcome!</h1>
-      <p>You are visitor number {visitors}.</p>
+      <Counter count={visitors} />
     </main>
   );
 }
